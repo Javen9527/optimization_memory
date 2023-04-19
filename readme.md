@@ -4,7 +4,20 @@
 
 Note: 该方案风险太大，工作量也不小，暂时搁置。
 
-重新实现一个fixed_vector，包含基本的stl vector的功能，参考本人之前的工作代码，一套成熟的渲染引起中大量使用的fixed_vector<type, size>
+重新实现一个fixed_vector，包含基本的stl vector的功能，参考本人之前的工作代码，一套成熟的渲染引擎中大量使用的fixed_vector<type, size>
+附代码一览（见后）
+
+### 2. 移植chromium中stack vector
+
+重载std::allocator实现栈空间内存分配，在使用stl vector时候指定重新实现后的allocator(stack allocator)
+
+1. 问题链接：https://stackoverflow.com/questions/354442/looking-for-c-stl-like-vector-class-but-using-stack-storage
+
+2. 代码链接：https://chromium.googlesource.com/chromium/chromium/+/master/base/stack_container.h
+
+
+附代码:
+
 ```c++
 /**
  * A container which has some space allocated on the stack, thus not needing to
@@ -147,11 +160,3 @@ class fixed_vector {
 };
 
 ```
-
-### 2. 移植chromium中stack vector
-
-重载std::allocator实现栈空间内存分配，在使用stl vector时候指定重新实现后的allocator(stack allocator)
-
-1. 问题链接：https://stackoverflow.com/questions/354442/looking-for-c-stl-like-vector-class-but-using-stack-storage
-
-2. 代码链接：https://chromium.googlesource.com/chromium/chromium/+/master/base/stack_container.h
