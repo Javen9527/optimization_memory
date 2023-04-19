@@ -9,7 +9,7 @@
 #include <stddef.h>         // For size_t
 #include <string.h>         // for memcpy
 
-#include "base/port.h"    // Types that only need exist on certain systems
+#include "internal/port.h"    // Types that only need exist on certain systems
 
 #ifndef COMPILER_MSVC
 // stdint.h is part of C99 but MSVC doesn't have it.

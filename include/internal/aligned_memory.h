@@ -22,9 +22,9 @@
 #ifndef BASE_MEMORY_ALIGNED_MEMORY_H_
 #define BASE_MEMORY_ALIGNED_MEMORY_H_
 
-#include "base/basictypes.h"
-#include "base/compiler_specific.h"
-#include "base/logging.h"
+#include "internal/basictypes.h"
+#include "internal/compiler_specific.h"
+// #include "base/logging.h"
 
 namespace base {
 

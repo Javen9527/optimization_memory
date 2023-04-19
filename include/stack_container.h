@@ -8,9 +8,9 @@
 #include <string>
 #include <vector>
 
-#include "base/basictypes.h"
-#include "build/build_config.h"
-#include "base/memory/aligned_memory.h"
+#include "internal/basictypes.h"
+#include "internal/build_config.h"
+#include "internal/aligned_memory.h"
 
 // This allocator can be used with STL containers to provide a stack buffer
 // from which to allocate memory and overflows onto the heap. This stack buffer
